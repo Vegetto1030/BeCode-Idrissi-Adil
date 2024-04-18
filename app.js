@@ -47,5 +47,25 @@ let vat = basePrice *21/100;
 let priceWithVat = basePrice + vat;
 alert(`The price with the vat is ${priceWithVat} € !`);
 
-*/
 
+//
+
+let radius = prompt("What's the radius of your circle ?")
+radius = parseInt(radius);
+const surface = Math.PI *(radius**2);
+alert(`The surface of your cirle is ${surface} m²!`);
+
+//
+
+let num1 = prompt("What's the first number ?");
+num1 = parseInt(num1);
+let sum = num1;
+
+let num2 = prompt("What's your second number ?");
+num2 = parseInt(num2);
+sum += num2;
+
+alert(`The sum of those two number is ${sum} !`);
+//If we want to change to another operator, we modify the += to smt else (ex : *=, -=,...)
+
+*/

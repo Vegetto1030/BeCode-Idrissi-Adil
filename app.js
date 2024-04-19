@@ -127,4 +127,41 @@ if(fruit === "bananas"){
     alert(`I don't understand what's a ${fruit}`);
 }
 
+
+
+
+//Exercice 12.b
+
+const leaderboard = ["Harry", "Lua", "Hermione", "Bellatrix"]; //DON'T TOUCH THIS LINE!
+
+// YOUR CODE BELOW HERE:
+
+leaderboard.splice(1, 1, 'Luna');
+
+leaderboard.splice(3, 1, 'Draco');
+console.log(leaderboard);
+
+
+
+const initialArray = [
+    null,
+    true,
+    ["Apple", "two", undefined],
+    false,
+    ["three", "BeCode"],
+    4,
+    "I am a big bad wolf",
+    ["one"],
+];
+
+let list1 = [initialArray [2][1]];
+let list2 = [initialArray [4][0]];
+let list3 = [initialArray [7][0]];
+
+let list = list3.concat(list1).concat(list2);
+
+
+console.log(list);
+
+
 */

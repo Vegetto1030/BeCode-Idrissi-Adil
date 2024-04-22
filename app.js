@@ -252,6 +252,19 @@ while (true) {
 
 */
 
+function repeat (){
+    console.log("DO");
+    console.log("RE");
+    console.log("MI");
+    console.log("FA");
+    console.log("SOL");
+    console.log("LA");
+    console.log("SI");
+}
+
+repeat();
+
+
 
 
 

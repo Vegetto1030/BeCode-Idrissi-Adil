@@ -176,7 +176,7 @@ for(let i = 0; i < colors.length; i++){
     console.log(phrase + `${colors[i]}`);
 }
 
-*/
+//Exercice 18
 
 let maxNumber;
 
@@ -206,6 +206,52 @@ while(true){
 
 
 alert(`Congratulation ! You got it with ${attempts} attempts !`);
+
+
+
+//Exercice 20
+
+let todos = [];
+
+while (true) {
+    let command = prompt("Please enter a command (new, list, delete, quit):");
+
+    switch (command) {
+        case "new":
+            let newTodo = prompt("Enter the new todo:");
+            todos.push(newTodo);
+            alert(`Todo "${newTodo}" added to the list.`);
+            break;
+        case "list":
+            let todoList = "********* TODO LIST *********\n";
+            for (let i = 0; i < todos.length; i++) {
+                todoList += `${i + 1}. ${todos[i]}\n`;
+            }
+            alert(todoList);
+            break;;
+        case "delete":
+            let deleteIndex = parseInt(prompt("Enter the number of the todo to delete:")) - 1;
+            if (deleteIndex >= 0 && deleteIndex < todos.length) {
+                let deletedTodo = todos.splice(deleteIndex, 1);
+                alert(`Todo "${deletedTodo}" deleted.`);
+            } else {
+                alert("Invalid todo number.");
+            }
+            break;
+        case "quit":
+            alert("Exiting the program.");
+            break;
+        default:
+            alert("Invalid command. Please try again.");
+    }
+
+    if (command === "quit") {
+        break;
+    }
+}
+
+*/
+
 
 
 

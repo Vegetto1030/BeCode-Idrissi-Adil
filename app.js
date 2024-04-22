@@ -176,35 +176,36 @@ for(let i = 0; i < colors.length; i++){
     console.log(phrase + `${colors[i]}`);
 }
 
+*/
+
+let maxNumber;
+
+do {
+    maxNumber = parseInt(prompt("Enter the maximum number:"));
+} while (isNaN(maxNumber));
+    
+let random = Math.floor(Math.random() * maxNumber);
+let guess; 
 
 
-let maxNumber = parseInt((prompt("Type a max number")));
-
-while(isNaN(maxNumber) == true){
-    maxNumber = parseInt(prompt("This is not a number. Type again"));
-}
-let random = Math.random() * maxNumber;
-Math.round(random);
-
-let guess = parseInt(prompt("Guess what number I'm thinking..."));
-let counter = 0;
-
-while(guess !== random){
-    if(isNaN(guess) == true){
-        prompt("This is not a number;")
-        counter++;
+while(true){
+    let attempts = 0;
+    guess = parseInt(prompt("Guess the number"));
+    if(isNaN(guess)){
+        alert("This is not a number");
     } else if(guess < random){
-        prompt("You're lower");
-        counter++; 
+        alert("You're lower");
+        attempts++;
     } else if (guess > random){
-        prompt("You're higher")
-        counter++;
+        alert("You're higher");
+        attempts++;
+    } else{
+        break;
     }
 }
 
-alert(`Congratulation ! You've found my number ! You had to do ${counter} guess to find me !`);
 
-*/
+alert(`Congratulation ! You got it with ${attempts} attempts !`);
 
 
 

@@ -166,4 +166,48 @@ console.log(list);
 Je teste quelque chose avec mon nouveau pc
 
 
+
+//Exercice from the for loop video
+
+const colors = ["Rouge", "Vert", "Bleu", "Orange"];
+let phrase = "My favorite colors are : "
+
+for(let i = 0; i < colors.length; i++){
+    console.log(phrase + `${colors[i]}`);
+}
+
+
+
+let maxNumber = parseInt((prompt("Type a max number")));
+
+while(isNaN(maxNumber) == true){
+    maxNumber = parseInt(prompt("This is not a number. Type again"));
+}
+let random = Math.random() * maxNumber;
+Math.round(random);
+
+let guess = parseInt(prompt("Guess what number I'm thinking..."));
+let counter = 0;
+
+while(guess !== random){
+    if(isNaN(guess) == true){
+        prompt("This is not a number;")
+        counter++;
+    } else if(guess < random){
+        prompt("You're lower");
+        counter++; 
+    } else if (guess > random){
+        prompt("You're higher")
+        counter++;
+    }
+}
+
+alert(`Congratulation ! You've found my number ! You had to do ${counter} guess to find me !`);
+
 */
+
+
+
+
+
+

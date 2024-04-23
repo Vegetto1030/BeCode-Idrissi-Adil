@@ -388,4 +388,24 @@ const times = function (rollDie, amount){
 
 times(rollDie, 3);
 
+
+
+//Exercice 24
+
+const user = {
+    firstName : "Adil",
+    lastName : "Idrissi",
+    age : 23,
+    printAge : function() {
+        console.log(`${this.firstName} ${this.lastName} is ${this.age} years old`);
+    },
+
+    aYearHasPast : function (){
+        this.age += 1; 
+    }
+}
+
+user.aYearHasPast();
+user.printAge();
+
 */

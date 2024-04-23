@@ -250,7 +250,7 @@ while (true) {
     }
 }
 
-*/
+
 
 function repeat (){
     console.log("DO");
@@ -264,10 +264,111 @@ function repeat (){
 
 repeat();
 
+//Exercice 21.b
+
+function dice(faces, times){
+    for(let i  = 0; i <= times; i++ ){
+        faces = Math.floor(Math.random() * faces);
+        console.log(`Die ${i} : ${faces}`);
+    }
+}
+
+dice(10, 5);
 
 
 
+function repeat(string , times){
+    console.log(string.repeat(times));
+}
+
+repeat("LOL", 5);
 
 
 
+function greet(firstName, lastName){
+    console.log(`This is ${firstName} ${lastName.charAt(0)}.`);
+}
 
+greet("Adil", "Idrissi");
+
+
+
+const myVariable = function(num1, num2){
+    console.log(num1 + num2);
+}
+
+myVariable(22, 18);
+
+
+
+function logs() {
+    console.log("Hello");
+    console.log("World");
+    return 4;
+    console.log("Goodbye");
+    console.log("World");
+}
+const myVariable = logs();
+
+console.log(myVariable);
+
+
+
+function isShortWeather(temp){
+    if(temp >= 24){
+        return true;
+    } else {
+        return false;
+    }
+}
+isShortWeather(28);
+
+
+function lastElement(tableau){
+    if(tableau == null){
+        return null;
+    } else{
+        let dernierElement = tableau[tableau.length - 1];
+        console.log(dernierElement);
+    }
+}
+
+lastElement([4, 68]);
+
+
+
+function capitalize(string){
+    let word = string.charAt(0).toUpperCase();
+    let final = word + string.substring(1);
+    console.log(final)
+}
+
+capitalize("trompette");
+
+
+
+function sumArray(array){
+    let total = 0;
+    for(let i = 0; i < array.length; i++){
+        total += array[i]
+    }
+    console.log(total);
+}
+
+sumArray([5, 4, 6, 8]);
+
+
+
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+function returnDay(number){
+    if(number < 1 || number > 7){
+        return null;
+    } else{
+        console.log(days[number - 1]);
+    }
+}
+
+returnDay(2);
+
+*/

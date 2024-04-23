@@ -371,4 +371,21 @@ function returnDay(number){
 
 returnDay(2);
 
+
+
+//Exercice 23
+
+const rollDie = function () {
+    const roll = Math.floor(Math.random() * 6 + 1);
+    console.log(roll);
+};
+
+const times = function (rollDie, amount){
+    for(let i = 1; i <= amount; i++){
+        rollDie(i);
+    }
+}
+
+times(rollDie, 3);
+
 */

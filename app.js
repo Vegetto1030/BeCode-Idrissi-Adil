@@ -536,13 +536,11 @@ console.log(profitableGamble(0.9, 3, 2));
 
 //Exercice 8
 
-function frames(number, minute){
-    return number*minute*60
-}
+const frames = (number, minute) =>  number * minute * 60;
+
 console.log(frames(1, 1));
 console.log(frames(10, 1));
 console.log(frames(10, 25));
-
 
 
 //Exercice 9

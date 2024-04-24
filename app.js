@@ -408,4 +408,156 @@ const user = {
 user.aYearHasPast();
 user.printAge();
 
+
+
+
+
+//Dossier Algo
+
+
+//Exercice 0
+
+function makesTen(a , b){
+    if(a === 10 || b === 10 || a + b === 10){
+        return true;
+    }else {
+        return false;
+    }
+}
+
+makesTen(9, 10);
+makesTen(9, 9);
+makesTen(9, 1);
+
+
+
+//Exercice 1
+
+function calcAge(age){
+    console.log(age * 365);
+}
+
+calcAge(65);
+calcAge(0);
+calcAge(20);
+
+
+
+//Exercice 2
+
+function addUp(num){
+    let sum = 0;
+    for(let i = 1; i <= num; i++){
+        sum+= i;
+    }
+    console.log(sum);
+}
+
+addUp(4);
+addUp(13);
+addUp(600);
+
+
+
+//Exercice 3
+
+function minMax(tableau){
+    const minmum = Math.min(...tableau);
+    const maximum = Math.max(...tableau);
+
+    const minMax = [minmum, maximum];
+
+    console.log(minMax);
+}
+
+minMax([1, 2, 3, 4, 5]);
+minMax([2334454, 5]);
+minMax([1]);
+
+*
+
+//Exercice 4
+
+function detectWord(word){
+    const tableau = word.split('')
+    const lowerCase = tableau.filter(letter => letter === letter.toLowerCase());
+    return lowerCase.join('');
+}
+
+
+detectWord("UcUNFYGaFYFYGtNUH") 
+detectWord("bEEFGBuFBRrHgUHlNFYaYr") 
+detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment")
+
+
+
+//Exercice 5
+
+drinks = [
+    {name: "lemonade", price: 10},
+    {name: "lime", price: 10},
+    {name: "coke", price: 8},
+    {name: "vodka", price: 17},
+    {name: "water", price: 3},
+]
+
+function sortDrinkByPrice(drinks){
+    const sorted = drinks.sort((a, b) => a.price - b.price);
+    return sorted;
+}
+
+console.log(sortDrinkByPrice(drinks));
+
+
+//Exercice 6
+
+
+const animals = (chickens, cows, pigs) => chickens* 2 + (cows+pigs)*4
+
+console.log(animals(2, 3, 5));
+console.log(animals(1, 2, 3));
+console.log(animals(5, 2, 8));
+
+
+
+//Exercice 7
+
+function profitableGamble(probability, prize, pay){
+    if(probability*prize > pay){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+console.log(profitableGamble(0.2, 50, 9));
+console.log(profitableGamble(0.9, 1, 2));
+console.log(profitableGamble(0.9, 3, 2)); 
+
+//Exercice 8
+
+function frames(number, minute){
+    return number*minute*60
+}
+console.log(frames(1, 1));
+console.log(frames(10, 1));
+console.log(frames(10, 25));
+
+
+
+//Exercice 9
+
+function calculateFuel(distance){
+    let fuel = distance * 10;
+    if(fuel >= 100){
+        return fuel;
+    } else {
+        return 100;
+    }
+}
+
+console.log(calculateFuel(15));
+console.log(calculateFuel(23.5));
+console.log(calculateFuel(3));
+
 */

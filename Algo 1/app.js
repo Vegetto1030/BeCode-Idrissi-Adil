@@ -466,7 +466,7 @@ function recursiv(x, s = 0){
 
 console.log(recursiv(5));
 
-
+/*
 
 
 addUp(4);
@@ -502,7 +502,6 @@ function detectWord(word){
     const lowerCase = tableau.filter(letter => letter === letter.toLowerCase());
     return lowerCase.join('');
 }
-
 
 const detectWord = (word) => word.split('').filter(letter => letter === letter.toLowerCase()).join('');
 

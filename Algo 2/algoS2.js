@@ -79,4 +79,64 @@ const occurencies = (string, letter) => string.split('').filter(char => char ===
 console.log(occurencies("hello", "l"));
 console.log(occurencies("abracadabra", "a"));
 
+//Exercice 6
+
+const sortIt = (tableau) => [...tableau.sort()];
+
+console.log(sortIt([[4], [1], [3]]));
+console.log(sortIt([4, [1], 3]))
+console.log(sortIt([[3], 4, [2], [5], 1, 6]))
+
+
+
+//Exercice 7
+
+function calculator (a, string, b){
+    switch(string){
+        case "+":
+            return a+b;
+        case "-":
+            return a-b;
+        case "*":
+            return a*b;
+        case "/":
+            if(b == 0){
+                return "Can't divide by 0!";
+            } else {
+                return a/b;
+            }
+    }
+}
+console.log(calculator(2, "+", 2));
+console.log(calculator(2, "/", 0));
+
+
+
+//Exercice 8
+const landmass = 148940000;
+
+const areaOfCountry = (land, area) => `${land} is ${((area/landmass)*100).toFixed(2)}% of the total world's landmass`;
+
+console.log(areaOfCountry("Russia", 17098242));
+console.log(areaOfCountry("USA", 9372610));
+
+
+
+//Exercice 9
+
+function reverseWords(string){
+    let x = string.split(' ')
+    if(x.length >= 2){
+        [x[0], x[x.length -1]] = [x[x.length -1], x[0]];
+        return x.join(' ').trim();
+    }
+}
+
+
+const reverseWords =  (string) => string.split(' ').filter((x) => x).reverse().join(' ');
+
+console.log(reverseWords(" the sky is blue"));
+console.log(reverseWords("hello   world!  "));
+console.log(reverseWords("a good example"));
+
 */

@@ -425,8 +425,10 @@ function makesTen(a , b){
     }
 }
 
-makesTen(9, 10);
-makesTen(9, 9);
+
+const makesTen = (a, b) => a === 10 || b === 10 || a + b === 10 ? true : false;
+console.log(makesTen(9, 10));
+console.log(makesTen(9, 9));
 makesTen(9, 1);
 
 
@@ -436,6 +438,8 @@ makesTen(9, 1);
 function calcAge(age){
     console.log(age * 365);
 }
+
+const calcAge = (age) => parseFloat((age * 365));
 
 calcAge(65);
 calcAge(0);
@@ -450,8 +454,20 @@ function addUp(num){
     for(let i = 1; i <= num; i++){
         sum+= i;
     }
-    console.log(sum);
+    return sum;
 }
+
+
+function recursiv(x, s = 0){
+    if (x == 0) return s
+    console.log(x-1 + " " + (x+s));
+    return recursiv(x-1, s+x)
+}
+
+console.log(recursiv(5));
+
+
+
 
 addUp(4);
 addUp(13);
@@ -470,11 +486,14 @@ function minMax(tableau){
     console.log(minMax);
 }
 
-minMax([1, 2, 3, 4, 5]);
-minMax([2334454, 5]);
-minMax([1]);
+const minMax = (tableau) => [Math.min(...tableau), Math.max(...tableau)]; 
 
-*
+
+console.log(minMax([1, 2, 3, 4, 5]));
+console.log(minMax([2334454, 5]));
+console.log(minMax([1]));
+
+
 
 //Exercice 4
 
@@ -485,9 +504,12 @@ function detectWord(word){
 }
 
 
-detectWord("UcUNFYGaFYFYGtNUH") 
-detectWord("bEEFGBuFBRrHgUHlNFYaYr") 
-detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment")
+const detectWord = (word) => word.split('').filter(letter => letter === letter.toLowerCase()).join('');
+
+
+console.log(detectWord("UcUNFYGaFYFYGtNUH"));
+console.log(detectWord("bEEFGBuFBRrHgUHlNFYaYr"));
+console.log(detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment"));
 
 
 
@@ -506,7 +528,10 @@ function sortDrinkByPrice(drinks){
     return sorted;
 }
 
+const sortDrinkByPrice = (drinks) => drinks.sort((a, b) => a.price - b.price)
 console.log(sortDrinkByPrice(drinks));
+
+
 
 
 //Exercice 6
@@ -529,6 +554,9 @@ function profitableGamble(probability, prize, pay){
         return false;
     }
 }
+
+
+const profitableGamble = (probability, prize, pay) => probability*prize > pay ? true : false;
 
 console.log(profitableGamble(0.2, 50, 9));
 console.log(profitableGamble(0.9, 1, 2));
@@ -553,6 +581,8 @@ function calculateFuel(distance){
         return 100;
     }
 }
+
+const calculateFuel = (distance) => distance * 10 >= 100 ? distance * 10 : 100;
 
 console.log(calculateFuel(15));
 console.log(calculateFuel(23.5));

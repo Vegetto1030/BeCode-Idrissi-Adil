@@ -1,4 +1,4 @@
-//SERIE 1
+//SERIE 2
 
 //Exercice 0 
 /*
@@ -143,7 +143,7 @@ console.log(reverseWords("a good example"));
 
 
 
-//SERIE 2
+//SERIE 3
 //Exercice 0
 
 function oddishOrEvenish(number){
@@ -275,4 +275,26 @@ console.log(findBrokenKeys("happy birthday", "hawwy birthday"));
 console.log(findBrokenKeys("starry night", "starrq light"));
 console.log(findBrokenKeys("beethoven", "affthoif5"));
 
+
+
+//SERIE 4
+
+//Exercice 0
+
+function modular(num){
+    for(let i = 1; i <= num; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            console.log("FizzBuzz");
+        }else if(i % 3 === 0){
+            console.log("Fizz");
+        }else if(i % 5 === 0){
+            console.log("Buzz");
+        } else{
+            console.log(i);
+        }
+    }
+}
+
+modular(20);
 */
+

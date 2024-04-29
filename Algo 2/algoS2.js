@@ -1,3 +1,5 @@
+//SERIE 1
+
 //Exercice 0 
 /*
 const countTrue = (array) => array.reduce((counter, valeur) => valeur == true ? counter + 1 : counter, 0);
@@ -138,5 +140,139 @@ const reverseWords =  (string) => string.split(' ').filter((x) => x).reverse().j
 console.log(reverseWords(" the sky is blue"));
 console.log(reverseWords("hello   world!  "));
 console.log(reverseWords("a good example"));
+
+
+
+//SERIE 2
+//Exercice 0
+
+function oddishOrEvenish(number){
+    let x = number.toString();
+    let somme =0;
+
+    for(let i = 0; i < x.length; i++){
+        somme += parseFloat(x[i]);
+    }
+    if(somme % 2 == 0){
+        return "Evenish";
+    } else {
+        return "Oddish";
+    }
+}
+
+console.log(oddishOrEvenish(43));
+console.log(oddishOrEvenish(373));
+console.log(oddishOrEvenish(4433));
+
+
+//Exercice 1
+
+const getTotalPrice = (groceries) => groceries.reduce((total, grocery) => total + (grocery.price * grocery.quantity), 0);
+
+
+console.log(getTotalPrice([
+    { product: "Milk", quantity: 1, price: 1.50 },
+    { product: "Cereals", quantity: 1, price: 2.50 }
+]))
+console.log(getTotalPrice([
+    { product: "Milk", quantity: 1, price: 1.50 },
+    { product: "Eggs", quantity: 12, price: 0.10 },
+    { product: "Bread", quantity: 2, price: 1.60 },
+    { product: "Cheese", quantity: 1, price: 4.50 }
+]))
+
+
+//Exercice 2
+
+function reverseOdd(word){
+    let x = word.split(' ');
+
+    for(let i = 0; i < x.length; i++){
+        if(x[i].length % 2 !== 0){
+            x[i] = x[i].split("").reverse().join('');
+        }
+    }
+    return x.join(' ')
+}
+
+console.log(reverseOdd("Bananas"));
+console.log(reverseOdd("Make sure uoy only esrever sdrow of ddo length"));
+
+
+
+//Exercice 3
+
+function isSmooth(sentence){
+    let word = sentence.split(' ');
+
+    for(let i = 0; i < word.length - 1; i++){
+        const first = word[i].toLowerCase();
+        const second = word[i+1].toLowerCase();
+
+        if(first.charAt(first.length -1) !== second.charAt(0)){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isSmooth("Marta appreciated deep perpendicular right trapezoids"));
+console.log(isSmooth("Someone is outside the doorway"));
+
+
+
+//Exercice 4
+
+function sevenBoom(numbers){
+    let x = numbers.toString().split('');
+
+    if(x.includes("7")){
+        return "Boom";
+    }else {
+        return "there is no 7 in the array";
+    }
+}
+
+console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7]));
+console.log(sevenBoom([8, 6, 33, 100]));
+console.log(sevenBoom([2, 55, 60, 97, 86]));
+
+
+
+//Exercice 5
+
+function convert(temp){
+    if(temp.includes("C")){
+        return `${((parseFloat(temp) * 9/5) + 32).toFixed(0)}°F`;
+    } else if(temp.includes("F")){
+        return `${((parseFloat(temp) - 32) *5/9).toFixed(0)}°C`;
+    } else{
+        return "Error";
+    }
+}
+
+console.log(convert("35°C"));
+console.log(convert("19°F"));
+console.log(convert("33"));
+
+
+//Exercice 6
+
+function findBrokenKeys(word1, word2){
+    let x = word1.split('');
+    let y = word2.split('');
+    let arr = [];
+    for (let i = 0; i < x.length; i++) {
+        // Compare les caractères correspondants
+        if (x[i] !== y[i] && !arr.includes(x[i])) {
+                arr.push(x[i]);
+        }
+    }
+    return arr;
+}
+
+console.log(findBrokenKeys("happy birthday", "hawwy birthday"));
+console.log(findBrokenKeys("starry night", "starrq light"));
+console.log(findBrokenKeys("beethoven", "affthoif5"));
 
 */

@@ -296,5 +296,182 @@ function modular(num){
 }
 
 modular(20);
-*/
 
+
+//Exercice 1
+
+function ransomNote(noteText, magazineText) {
+    
+    const noteWords = noteText.split(" ");
+    const magazineWords = magazineText.split(" ");
+
+    const magazineWordFrequency = {};
+    magazineWords.forEach(word => {
+        magazineWordFrequency[word] = (magazineWordFrequency[word] || 0) + 1;
+    });
+
+    for (let i = 0; i < noteWords.length; i++) {
+        const word = noteWords[i];
+        if (!magazineWordFrequency[word] || magazineWordFrequency[word] === 0) {
+            return false;
+        } else {
+            magazineWordFrequency[word]--;
+        }
+    }
+
+    return true;
+}
+
+//OU ALORS BCP PLUS SIMPLE
+
+function ransomNote(noteText, magazineText) {
+    const magazineWords = magazineText.split(' ');
+
+    // Iterate through note words
+    for (const word of noteText.split(' ')) {
+        const index = magazineWords.indexOf(word);
+        if (index === -1) return false; // Word not found
+        magazineWords.splice(index, 1); // Remove word from magazine
+    }
+    return true;
+}
+
+// Test cases
+const noteText1 = "this is a secret note to you from a secret admirer";
+const magazineText1 = "puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirer of but note that it is not as hard as it seems this is my advice to you";
+
+console.log(ransomNote(noteText1, magazineText1));
+
+const noteText2 = "this is a note to you from a secret admirer";
+console.log(ransomNote(noteText2, magazineText1)); 
+
+
+
+//Exercice 2
+
+function isPalindrome(text){
+    const palindrome = text.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+    let reverse = ""
+    for(let i = palindrome.length - 1; i >= 0; i--){
+        reverse += palindrome[i];
+    }
+    
+    if(palindrome == reverse){
+        return true;
+    } else{
+        return false;
+    }
+
+}
+
+console.log(isPalindrome("kayak"))
+console.log(isPalindrome("race car"));
+console.log(isPalindrome("hello world"));
+console.log(isPalindrome("Madam, I'm Adam"));
+
+
+
+//Exercice 3
+
+function caesarCipher(str, num) {
+    let retval = [];
+    str = str.toLowerCase();
+    // a = 97 à z = 122
+    let strArray = str.split('');
+    for (let i = 0; i < strArray.length; i++) {
+        let charAsciiCode = strArray[i].charCodeAt(0);
+        if (charAsciiCode >= 97 && charAsciiCode <= 122) {
+            let cypherChar;
+            let sum = charAsciiCode + num;
+            if (sum > 122) {
+                let cypherCharAsciiCode = sum - 26;
+                cypherChar = String.fromCharCode(cypherCharAsciiCode);
+            }
+            else if (sum < 97) {
+                let cypherCharAsciiCode = sum + 26;
+                cypherChar = String.fromCharCode(cypherCharAsciiCode);
+            } else {
+                cypherChar = String.fromCharCode(sum);
+            }
+            retval.push(cypherChar);
+        }
+        else {
+            retval.push(strArray[i]);
+        }
+    }
+    return retval.join('');
+}
+
+
+
+//Exercice 4
+
+function reverseWord(str){
+    let tab = str.toLowerCase().split(' ');
+
+    for (let i = 0; i < tab.length; i++) {
+        tab[i] = tab[i].split('').reverse().join('');
+    }
+    return tab.join(' ')
+} 
+console.log(reverseWord("This is a string of words"));
+
+
+
+//Exercice 5
+
+function reverseArray(arr){
+    for (let i = 0; i < arr.length / 2; i++) {
+        [arr[i], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[i]];
+    }
+
+    return arr;
+}
+
+
+console.log(reverseArray([1, 2, 3, 4]))
+
+
+
+//Exercice 6
+
+function regroupedArray(numArray, sum){
+    let sumArray = [];
+    for(let i = 0; i < numArray.length; i++){
+        for(let j = i + 1; j < numArray.length; j++){
+            if((numArray[i] + numArray[j]) === sum){
+                sumArray.push([numArray[j], numArray[i]]);
+            }
+        }
+        
+    }
+    return sumArray;
+}
+    
+
+console.log(regroupedArray([1, 6, 4, 5, 3, 3], 7));
+
+
+
+function fibonacci(num){
+    let sequence = [];
+    for (let i = 0; i < num; i++) {
+        if (i === 0) {
+            sequence.push(1);
+        } else if(i === 1){
+            sequence.push(1);
+        } else {
+            let nextTerm = sequence[i - 1] + sequence[i - 2]; 
+            sequence.push(nextTerm); 
+        }
+    }
+    
+    return sequence;
+}
+
+
+console.log(fibonacci(4));
+console.log(fibonacci(9));
+console.log(fibonacci(6));
+
+*/

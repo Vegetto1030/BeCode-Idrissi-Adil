@@ -74,13 +74,6 @@ console.log(removeLeadingTrailing("30"));
 
 
 
-//One linear Exercice 8
-
-const occurencies = (string, letter) => string.split('').filter(char => char === letter).length;
-                                    //Ou alors[...map] pour parcourir le string
-console.log(occurencies("hello", "l"));
-console.log(occurencies("abracadabra", "a"));
-
 //Exercice 6
 
 const sortIt = (tableau) => [...tableau.sort()];
@@ -347,6 +340,7 @@ console.log(ransomNote(noteText2, magazineText1));
 
 
 
+
 //Exercice 2
 
 function isPalindrome(text){
@@ -368,6 +362,7 @@ console.log(isPalindrome("kayak"))
 console.log(isPalindrome("race car"));
 console.log(isPalindrome("hello world"));
 console.log(isPalindrome("Madam, I'm Adam"));
+
 
 
 
@@ -454,24 +449,126 @@ console.log(regroupedArray([1, 6, 4, 5, 3, 3], 7));
 
 
 function fibonacci(num){
-    let sequence = [];
-    for (let i = 0; i < num; i++) {
-        if (i === 0) {
-            sequence.push(1);
-        } else if(i === 1){
-            sequence.push(1);
-        } else {
-            let nextTerm = sequence[i - 1] + sequence[i - 2]; 
-            sequence.push(nextTerm); 
+    let sequence = [1, 1];
+    for (let i = 2; i < num; i++) {
+        let nextTerm = sequence[i - 1] + sequence[i - 2]; 
+        sequence.push(nextTerm); 
         }
-    }
-    
     return sequence;
 }
+
 
 
 console.log(fibonacci(4));
 console.log(fibonacci(9));
 console.log(fibonacci(6));
 
+
+
+
+// One linear
+
+// Ex 1
+
+const removeDuplicates = (array) => {return array.filter((value, index, self) => {return self.indexOf(value) === index })};
+
+console.log(removeDuplicates([4, 9, 5, 1, 3, 2, 4, 1, 8]));
+console.log(removeDuplicates(["hello", "world", "goodbye", "world"]));
+
+
+
+// Ex 2
+
+const capitalize = (land) => (land.replace(land[0], land.charAt(0).toUpperCase()));
+
+console.log(capitalize("belgium"));
+console.log(capitalize("bresil"));
+
+
+
+//Ex 3
+
+const dayDif = (date1, date2) => Math.floor(Math.abs(date2 - date1) / (1000 *60 *60 *24))
+
+console.log(dayDif(new Date("2020-10-21"), new Date("2021-10-22")));
+
+
+
+//Ex 4
+
+const average = (...numbers) => numbers.reduce((acc, val) => acc + val) / numbers.length;
+
+console.log(average(1, 2, 3, 4));
+
+
+
+//Ex 5
+
+const getSmaller = (array) => Math.min(...array);
+
+console.log(getSmaller([13, 7, 11, 3, 9, 15, 17]))
+
+
+
+//Ex 6
+
+const areEqual = (arr1, arr2) => arr1.every((value, index) => value === arr2.sort()[index]);
+
+console.log(areEqual([1,2,3,4], [3,1,4,2]));
+
+
+
+//Ex 7 
+
+const randomRGB = (r, g, b) => console.log(`rgb ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}`);
+
+randomRGB();
+
+
+//Ex 8
+
+const occurencies = (string, letter) => string.split('').filter(char => char === letter).length;
+                                    //Ou alors[...map] pour parcourir le string
+console.log(occurencies("hello", "l"));
+console.log(occurencies("abracadabra", "a"));
+
+
+
+//Ex 9
+
+const onlyPositives = (array) => array.reduce((acc, val) => val > 0 ? acc + val : acc + 0)
+
+console.log(onlyPositives([1, 6, 2, -3, 5, -12]));
+
+
+//Ex 10
+
+const scanAndFind = (list, obj) => list.filter(element => element[Object.keys(obj)] === Object.values(obj)[0]);
+
+console.log(scanAndFind(
+    [
+      {
+        firstName: "Vito",
+        lastName: "Corleone",
+      },
+      {
+        firstName: "Jon",
+        lastName: "Snow",
+      },
+      {
+        firstName: "Harry",
+        lastName: "Potter",
+      },
+      {
+        firstName: "Michal",
+        lastName: "Corleone",
+      },
+    ],
+    {
+      lastName: "Corleone",
+    }
+  ));
+
 */
+
+

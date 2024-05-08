@@ -199,10 +199,8 @@ function isSmooth(sentence){
     let word = sentence.split(' ');
 
     for(let i = 0; i < word.length - 1; i++){
-        const first = word[i].toLowerCase();
-        const second = word[i+1].toLowerCase();
 
-        if(first.charAt(first.length -1) !== second.charAt(0)){
+        if(word[i].charAt(word[i].length -1) !== word[i + 1].charAt(0)){
             return false;
         }
     }
@@ -213,11 +211,10 @@ console.log(isSmooth("Marta appreciated deep perpendicular right trapezoids"));
 console.log(isSmooth("Someone is outside the doorway"));
 
 
-
 //Exercice 4
 
 function sevenBoom(numbers){
-    let x = numbers.toString().split('');
+    let x = numbers.toString();
 
     if(x.includes("7")){
         return "Boom";

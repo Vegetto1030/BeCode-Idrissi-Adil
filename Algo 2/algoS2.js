@@ -316,14 +316,16 @@ function ransomNote(noteText, magazineText) {
 
 function ransomNote(noteText, magazineText) {
     const magazineWords = magazineText.split(' ');
+    const noteWords = noteText.split(' ');
 
-    // Iterate through note words
-    for (const word of noteText.split(' ')) {
-        const index = magazineWords.indexOf(word);
-        if (index === -1) return false; // Word not found
-        magazineWords.splice(index, 1); // Remove word from magazine
+    for (let i = 0; i < noteWords.length; i++) {
+        const index = magazineWords.indexOf(noteWords[i]);
+        if (index === -1) {
+            return false; 
+        }
+        magazineWords.splice(index, 1);
     }
-    return true;
+    return true;  
 }
 
 // Test cases

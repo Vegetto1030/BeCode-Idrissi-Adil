@@ -26,7 +26,7 @@ h1.brand span {
     color: rgb(14, 86, 96);
 }
 
-[data-role="dropdown"] > ul > li:nth-child(2) {
+.blabla + li {
     background-color: purple;
 }
 

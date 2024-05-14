@@ -1,0 +1,147 @@
+body{
+    background: #2D4480;   
+    width: 1440px;
+    height: 802px;
+    top: -512px;
+    left: -720px;
+    padding: 150px 0px 149px 0px;
+    gap: 0px;
+    opacity: 0px;
+}
+/*
+    1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+
+.carte{
+    background-color: #FFFFFF;
+    width: 288px;
+    height: 469px;
+    top: 150px;
+    margin-left: 576px;
+    gap: 0px;
+    border-radius: 27px;
+    opacity: 0px;
+    box-shadow: 5px 20px 50px 0px #00000099;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: "Noto Sans Symbols", sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    margin: 10px 0px 10px 95px;
+}
+
+h2 {
+    font-family: "Noto Sans Symbols", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin-right: 20px; 
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+hr{
+    border: 1px solid #000000;
+    margin: 10px 60px 0px 50px;
+}
+
+
+.vert{
+    width: 20px;
+    height: 20px;
+    top: 294px;
+    left: 626px;
+    gap: 0rem;
+    opacity: 0px;
+    margin-right: 20px;
+}
+
+.rouge{
+    width: 20px;
+    height: 20px;
+    top: 294px;
+    left: 626px;
+    gap: 0px;
+    opacity: 0px;
+    margin-right: 20px;
+}
+
+.free{
+    width: 97px;
+    height: 36px;
+    top: 469px;
+    left: 671px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: "Noto Sans Symbols" ,sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.13em;
+    text-align: left;
+}
+
+.forever{
+    width: 94px;
+    height: 36px;
+    top: 514px;
+    left: 708px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: "Allan", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    color: #2D4480;
+    transform: translateX(130px);
+}
+
+
+
+.button {
+    width: 181px;
+    height: 68px;
+    border-radius: 34px;
+    background: #FFBC0F;
+    text-align: center;
+    position: relative;
+    margin: 0 auto; 
+    bottom: -40px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-family: Noto Sans Symbols;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32.8px;
+    letter-spacing: 0.06em;
+    position: relative;
+}
+
+
+
+
+
+

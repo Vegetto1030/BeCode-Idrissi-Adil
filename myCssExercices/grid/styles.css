@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after{
+    box-sizing: content-box;
+}
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    height: 748px;
+    width: 748px;
+    display: grid;
+    gap: 9px;
+    grid-template-rows: 414px 130px 155px 20px;
+    grid-template-columns: 320px 198px 153px 50px;
+}
+
+.un{
+    grid-area: 1/1/2/2;
+    background-color: red;
+}
+
+.deux{
+    grid-area: 1/2/2/-1;
+    background-color: bisque;
+}
+
+.trois{
+    grid-area: 2/1/4/2;
+    background-color: bisque;
+}
+
+.quatre{
+    grid-area: 4/1/-1/2;
+    background-color: bisque;
+}
+
+.cinq{
+    grid-area: 2/2/4/4;
+    background-color: bisque
+}
+
+.six{
+    grid-area: 2/4/3/5;
+    background-color: darkblue;
+    border-bottom: 10px;
+}
+
+.sept{
+    grid-area: 3/4/5/-1;
+    background-color: bisque;
+}
+
+.huit{
+    grid-area: 5/2/4/3;
+    background-color: gold;
+}
+
+.neuf{
+    grid-area: 5/3/4/4;
+    background-color: darkgray;
+}
